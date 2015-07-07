@@ -1,0 +1,3 @@
+# SimpleRogue
+
+The Android platform implementation is available at https://github.com/adamwy/SimpleRogue-android[SimpleRogue-android].
