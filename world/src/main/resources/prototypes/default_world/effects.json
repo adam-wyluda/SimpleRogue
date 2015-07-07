@@ -1,0 +1,30 @@
+[
+    {
+        "prototype_id" : "fire",
+        "effect_handler" : "fire_handler",
+
+        "intensity" : 100,
+        "temperature" : 25,
+
+        "ignite_chance" : 0.05,
+        "ignite_intensity_modifier" : 3,
+
+        "char" : "^",
+        "color" : "RED"
+    },
+    {
+        "prototype_id" : "gas",
+        "effect_handler" : "gas_handler",
+
+        "intensity" : 100,
+        "intensity_modifier_range" : 5,
+        "strength" : 1,
+        "concentration" : 20,
+
+        "expand_intensity" : 50,
+        "expand_chance" : 0.1,
+
+        "char" : "S",
+        "color" : "GREEN"
+    }
+]

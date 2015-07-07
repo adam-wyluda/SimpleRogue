@@ -1,0 +1,33 @@
+[
+    {
+        "id" : 51,
+        "prototype_id" : "player",
+        "pos_y" : 10,
+        "pos_x" : 10,
+        "items" :
+        [
+            102, 103
+        ]
+    },
+    {
+        "id" : 52,
+        "prototype_id" : "monster",
+        "pos_y" : 13,
+        "pos_x" : 13
+    },
+    {
+        "id" : 101,
+        "prototype_id" : "sword",
+        "pos_y" : 20,
+        "pos_x" : 30
+    },
+    {
+        "id" : 102,
+        "prototype_id" : "sword",
+        "attack" : 1500
+    },
+    {
+        "id" : 103,
+        "prototype_id" : "bow"
+    }
+]

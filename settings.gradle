@@ -1,0 +1,6 @@
+rootProject.name = 'SimpleRogue'
+
+include 'engine'
+include 'engine-test'
+include 'world'
+include 'platform-javase'

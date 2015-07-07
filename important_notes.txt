@@ -1,0 +1,4 @@
+Some important notes:
+- since current JSON parser implementation can't differentiate between floating point and integer values,
+  number values are treated as double, and Model.getInts() will return a list of integers using Math.round() on them,
+  so it is recommended to put integer values into double quotes in .json files

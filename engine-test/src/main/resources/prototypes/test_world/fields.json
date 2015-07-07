@@ -1,0 +1,30 @@
+[
+    {
+        "prototype_id" : "wall",
+        "field_id" : 5,
+        "type" : "wall",
+        "blocking" : true,
+        "char" : "X",
+        "transparency" : 50,
+        "cached" : "true"
+    },
+    {
+        "prototype_id" : "floor",
+        "field_id" : 10,
+        "type" : "field",
+        "blocking" : false,
+        "char" : " ",
+        "test_array" :
+        [
+            "def",
+            "rty"
+        ]
+    },
+    {
+        "prototype_id" : "portal",
+        "field_handler" : "portal",
+        "field_id" : 15,
+        "blocking" : false,
+        "char" : "O"
+    }
+]

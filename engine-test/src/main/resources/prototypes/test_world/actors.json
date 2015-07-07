@@ -1,0 +1,14 @@
+[
+    {
+        "prototype_id" : "player",
+        "type" : "actor",
+        "ai_type" : "player_ai",
+        "char" : "@"
+    },
+    {
+        "prototype_id" : "monster",
+        "ai_type" : "monster",
+        "size" : 10,
+        "char" : "M"
+    }
+]

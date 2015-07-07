@@ -1,0 +1,18 @@
+[
+    {
+        "prototype_id" : "sword",
+        "type" : "sword",
+        "attack" : 20,
+        "char" : "!"
+    },
+    {
+        "prototype_id" : "bow",
+        "range" : 60,
+        "char" : "("
+    },
+    {
+        "prototype_id" : "staff",
+        "length" : 200,
+        "char" : "/"
+    }
+]

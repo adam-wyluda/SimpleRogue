@@ -1,0 +1,7 @@
+{
+    "level_type" : "test_level",
+    "height" : 100,
+    "width" : 100,
+    "level_property" : "value_x",
+    "room_count" : "2"
+}

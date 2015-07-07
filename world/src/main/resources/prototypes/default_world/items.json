@@ -1,0 +1,156 @@
+[
+    {
+        "prototype_id" : "short_sword",
+        "name" : "Short Sword",
+        "type" : "weapon",
+
+        "damage" : 30,
+
+        "char" : "/",
+        "color" : "GREEN"
+    },
+    {
+        "prototype_id" : "long_sword",
+        "name" : "Long Sword",
+        "type" : "weapon",
+
+        "damage" : 40,
+
+        "char" : "/",
+        "color" : "YELLOW"
+    },
+    {
+        "prototype_id" : "scimitar",
+        "name" : "Scimitar",
+        "type" : "weapon",
+
+        "damage" : 60,
+
+        "char" : "/",
+        "color" : "RED"
+    },
+    {
+        "prototype_id" : "bow",
+        "name" : "Bow",
+
+        "damage" : 3,
+        "range" : 10,
+
+        "char" : ")",
+        "color" : "GREEN"
+    },
+    {
+        "prototype_id" : "long_bow",
+        "name" : "Long Bow",
+
+        "damage" : 4,
+        "range" : 15,
+
+        "char" : ")",
+        "color" : "YELLOW"
+    },
+    {
+        "prototype_id" : "magic_bow",
+        "name" : "Magic Bow",
+
+        "damage" : 6,
+        "range" : 12,
+
+        "char" : ")",
+        "color" : "CYAN"
+    },
+    {
+        "prototype_id" : "death_bow",
+        "name" : "Death Bow",
+
+        "damage" : 10,
+        "range" : 15,
+
+        "char" : ")",
+        "color" : "GRAY"
+    },
+    {
+        "prototype_id" : "leather_armor",
+        "name" : "Leather Armor",
+        "type" : "armor",
+
+        "defense" : 10,
+
+        "char" : "R",
+        "color" : "ORANGE"
+    },
+    {
+        "prototype_id" : "iron_armor",
+        "name" : "Iron Armor",
+        "type" : "armor",
+
+        "defense" : 30,
+
+        "char" : "R",
+        "color" : "GRAY"
+    },
+    {
+        "prototype_id" : "steel_armor",
+        "name" : "Steel Armor",
+        "type" : "armor",
+
+        "defense" : 40,
+
+        "char" : "R",
+        "color" : "WHITE"
+    },
+    {
+        "prototype_id" : "magic_armor",
+        "name" : "Magic Armor",
+        "type" : "armor",
+
+        "defense" : 60,
+
+        "char" : "R",
+        "color" : "CYAN"
+    },
+    {
+        "prototype_id" : "health_potion",
+        "name" : "Potion of health",
+        "type" : "potion",
+        "item_handler" : "potion_handler",
+
+        "hp_modifier" : 50,
+
+        "char" : "&",
+        "color" : "0,90,255"
+    },
+    {
+        "prototype_id" : "big_health_potion",
+        "name" : "Big potion of health",
+        "type" : "potion",
+        "item_handler" : "potion_handler",
+
+        "hp_modifier" : 100,
+
+        "char" : "&",
+        "color" : "50,130,255"
+    },
+    {
+        "prototype_id" : "ultimate_health_potion",
+        "name" : "Ultimate potion of health",
+        "type" : "potion",
+        "item_handler" : "potion_handler",
+
+        "hp_modifier" : 300,
+
+        "char" : "&",
+        "color" : "255,200,200"
+    },
+    {
+        "prototype_id" : "death_potion",
+        "name" : "Potion of death",
+        "type" : "potion",
+        "item_handler" : "potion_handler",
+
+        "hp_modifier" : -200,
+
+        "char" : "&",
+        "color" : "90,0,255"
+    }
+]

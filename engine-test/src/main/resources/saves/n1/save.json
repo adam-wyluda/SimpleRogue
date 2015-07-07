@@ -1,0 +1,7 @@
+{
+    "configurator_name" : "test_game_configurator",
+    "player_id" : 51,
+    "secret_property" : "secret_value",
+    "turn_count" : 100,
+    "difficulty" : "HARD"
+}

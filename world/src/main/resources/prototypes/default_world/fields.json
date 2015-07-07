@@ -1,0 +1,63 @@
+[
+    {
+        "prototype_id" : "floor",
+        "field_id" : 1,
+        "type" : "floor",
+
+        "blocking" : false,
+
+        "char" : ".",
+        "color" : "GRAY"
+    },
+    {
+        "prototype_id" : "room_wall",
+        "field_id" : 100,
+        "type" : "field",
+
+        "blocking" : true,
+
+        "char" : "#",
+        "color" : "WHITE",
+        "cached" : "true"
+    },
+    {
+        "prototype_id" : "entry_wall",
+        "field_id" : 101,
+        "type" : "field",
+
+        "blocking" : true,
+
+        "char" : "#",
+        "color" : "100,190,255",
+        "cached" : "true"
+    },
+    {
+        "prototype_id" : "corridor_wall",
+        "field_id" : 102,
+        "type" : "field",
+
+        "blocking" : true,
+
+        "char" : "#",
+        "color" : "LIGHT_GRAY",
+        "cached" : "true"
+    },
+    {
+        "prototype_id" : "portal_up",
+        "field_id" : 200,
+        "field_handler" : "portal",
+        "type" : "portal",
+
+        "char" : "<",
+        "color" : "MAGENTA"
+    },
+    {
+        "prototype_id" : "portal_down",
+        "field_id" : 201,
+        "field_handler" : "portal",
+        "type" : "portal",
+
+        "char" : ">",
+        "color" : "MAGENTA"
+    }
+]

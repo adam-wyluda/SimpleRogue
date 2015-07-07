@@ -1,0 +1,109 @@
+[
+    {
+        "prototype_id" : "player",
+        "ai_type" : "player_ai",
+
+        "max_hp" : 100,
+        "strength" : 10,
+        "perception" : 10,
+        "stamina" : 10,
+
+        "char" : "@",
+        "blocking" : "true",
+        "color" : "CYAN"
+    },
+    {
+        "prototype_id" : "monster",
+        "type" : "monster",
+        "ai_type" : "monster_ai",
+
+        "max_hp" : 50,
+        "strength" : 15,
+        "perception" : 15,
+        "stamina" : 20,
+        "exp_gain" : 10,
+
+        "char" : "H",
+        "blocking" : "true",
+        "color" : "RED"
+    },
+    {
+        "prototype_id" : "monster_2",
+        "type" : "monster",
+        "ai_type" : "monster_ai",
+
+        "max_hp" : 60,
+        "strength" : 25,
+        "perception" : 15,
+        "stamina" : 20,
+        "exp_gain" : 15,
+
+        "char" : "H",
+        "blocking" : "true",
+        "color" : "255,220,0"
+    },
+    {
+        "prototype_id" : "monster_3",
+        "type" : "monster",
+        "ai_type" : "monster_ai",
+
+        "max_hp" : 80,
+        "strength" : 45,
+        "perception" : 15,
+        "stamina" : 20,
+        "exp_gain" : 20,
+
+        "char" : "H",
+        "blocking" : "true",
+        "color" : "255,0,220"
+    },
+    {
+        "prototype_id" : "big_monster",
+        "type" : "monster",
+        "ai_type" : "monster_ai",
+
+        "max_hp" : 80,
+        "strength" : 50,
+        "perception" : 25,
+        "stamina" : 30,
+        "exp_gain" : 25,
+
+        "char" : "G",
+        "blocking" : "true",
+        "color" : "255,120,20"
+    },
+    {
+        "prototype_id" : "fire_bloat",
+        "type" : "bloat",
+        "ai_type" : "bloat_ai",
+
+        "bloat_effect" : "fire",
+        "exp_gain" : 10,
+
+        "max_hp" : 10000,
+        "strength" : 0,
+        "perception" : 0,
+        "stamina" : 0,
+
+        "char" : "O",
+        "blocking" : "true",
+        "color" : "ORANGE"
+    },
+    {
+        "prototype_id" : "gas_bloat",
+        "type" : "bloat",
+        "ai_type" : "bloat_ai",
+
+        "bloat_effect" : "gas",
+        "exp_gain" : 25,
+
+        "max_hp" : 10000,
+        "strength" : 0,
+        "perception" : 0,
+        "stamina" : 0,
+
+        "char" : "O",
+        "blocking" : "true",
+        "color" : "GREEN"
+    }
+]
