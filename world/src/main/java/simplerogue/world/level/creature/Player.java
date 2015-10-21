@@ -2,7 +2,9 @@ package simplerogue.world.level.creature;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import simplerogue.engine.game.GameUtil;
 import simplerogue.engine.object.Model;
+import simplerogue.world.WorldConsts;
 
 /**
  * @author Adam Wyłuda
@@ -37,5 +39,34 @@ public class Player extends Humanoid
         save.put(SKILL_POINTS, skillPoints);
 
         return save;
+    }
+
+    public void increaseStrength()
+    {
+        setStrength(getStrength() + 1);
+        skillPoints--;
+    }
+
+    public void increasePerception()
+    {
+        setPerception(getPerception() + 1);
+        skillPoints--;
+    }
+
+    public void increaseStamina()
+    {
+        setStamina(getStamina() + 1);
+        skillPoints--;
+    }
+
+    public void tryLevelUp()
+    {
+        while (exp >= WorldConsts.EXP_THRESHOLD)
+        {
+            skillPoints++;
+            exp -= WorldConsts.EXP_THRESHOLD;
+
+            GameUtil.appendMessage("You gain a @(YELLOW|)skill point");
+        }
     }
 }

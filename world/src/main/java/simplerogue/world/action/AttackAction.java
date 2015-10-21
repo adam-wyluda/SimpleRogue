@@ -114,6 +114,13 @@ public class AttackAction extends AbstractAction<Creature>
                         attacker.getClass().getSimpleName(),
                         target.getClass().getSimpleName());
                 GameUtil.appendMessage(message);
+
+                if (attacker.is(Player.class))
+                {
+                    Player player = attacker.reify(Player.class);
+
+                    player.setExp(player.getExp() + target.getExpGain());
+                }
             }
         }
     }

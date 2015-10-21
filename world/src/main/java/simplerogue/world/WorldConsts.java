@@ -5,7 +5,7 @@ package simplerogue.world;
  */
 public class WorldConsts
 {
-    public static final int EXP_THRESHOLD = 100;
+    public static final int EXP_THRESHOLD = 50;
 
     public static final String PLAYER_NAME = "player";
 

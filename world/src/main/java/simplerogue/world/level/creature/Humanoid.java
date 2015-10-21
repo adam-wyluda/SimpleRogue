@@ -14,11 +14,8 @@ import simplerogue.world.level.item.Weapon;
 @EqualsAndHashCode(callSuper = true)
 public class Humanoid extends Creature
 {
-    private static final String EXP_GAIN = "exp_gain";
     private static final String EQUIPPED_ITEM = "equipped_weapon";
     private static final String EQUIPPED_ARMOR = "equipped_armor";
-
-    private int expGain;
 
     private Optional<Weapon> equippedWeapon;
     private Optional<Armor> equippedArmor;
@@ -28,7 +25,6 @@ public class Humanoid extends Creature
     {
         super.load(model);
 
-        expGain = model.has(EXP_GAIN) ? model.getInt(EXP_GAIN) : 0;
         equippedWeapon = model.getInstanceOptional(EQUIPPED_ITEM);
         equippedArmor = model.getInstanceOptional(EQUIPPED_ARMOR);
     }
@@ -38,7 +34,6 @@ public class Humanoid extends Creature
     {
         Model save = super.save();
 
-        save.put(EXP_GAIN, expGain);
         save.putInstance(EQUIPPED_ITEM, equippedWeapon.orNull());
         save.putInstance(EQUIPPED_ARMOR, equippedArmor.orNull());
 

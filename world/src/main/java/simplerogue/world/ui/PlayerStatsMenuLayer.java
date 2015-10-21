@@ -27,10 +27,54 @@ public class PlayerStatsMenuLayer extends MenuLayer
     {
         getOptions().clear();
 
-        Player player = Managers.get(GameManager.class).getPlayer();
+        final Player player = Managers.get(GameManager.class).getPlayer();
 
-        getOptions().add(MenuOption.create("Strength: " + player.getStrength()));
-        getOptions().add(MenuOption.create("Perception: " + player.getPerception()));
+        final boolean canIncrease = player.getSkillPoints() > 0;
+        String postfix = canIncrease ? " +" : "";
+
+        getOptions().add(MenuOption.create("Strength: " + player.getStrength() + postfix,
+                new MenuOption.OptionHandler<MenuOption>()
+                {
+                    @Override
+                    public void perform(MenuOption option, Key key)
+                    {
+                        if (canIncrease)
+                        {
+                            player.increaseStrength();
+                            reloadOptions();
+                        }
+                    }
+                }));
+
+        getOptions().add(MenuOption.create("Perception: " + player.getPerception() + postfix,
+                new MenuOption.OptionHandler<MenuOption>()
+                {
+                    @Override
+                    public void perform(MenuOption option, Key key)
+                    {
+                        if (canIncrease)
+                        {
+                            player.increasePerception();
+                            reloadOptions();
+                        }
+                    }
+                }));
+
+        getOptions().add(MenuOption.create("Stamina: " + player.getStamina() + postfix,
+                new MenuOption.OptionHandler<MenuOption>()
+                {
+                    @Override
+                    public void perform(MenuOption option, Key key)
+                    {
+                        if (canIncrease)
+                        {
+                            player.increaseStamina();
+                            reloadOptions();
+                        }
+                    }
+                }));
+
+        getOptions().add(MenuOption.create("Skill points: " + player.getSkillPoints()));
 
         getOptions().add(MenuOption.create("Back", new MenuOption.OptionHandler<MenuOption>()
         {
@@ -40,8 +84,6 @@ public class PlayerStatsMenuLayer extends MenuLayer
                 switchTo(GameMenuLayer.NAME);
             }
         }));
-
-        setSelectedOption(getOptions().get(getOptions().size() - 1));
     }
 
     @Override

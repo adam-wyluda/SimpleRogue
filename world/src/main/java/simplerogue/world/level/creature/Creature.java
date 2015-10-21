@@ -28,6 +28,7 @@ public class Creature extends Actor
     private static final String STRENGTH = "strength";
     private static final String PERCEPTION = "perception";
     private static final String STAMINA = "stamina";
+    private static final String EXP_GAIN = "exp_gain";
     private static final String MODIFIERS = "modifiers";
 
     private int maxHp;
@@ -36,6 +37,8 @@ public class Creature extends Actor
     private int strength;
     private int perception;
     private int stamina;
+
+    private int expGain;
 
     private List<Modifier> modifiers;
 
@@ -69,6 +72,7 @@ public class Creature extends Actor
         strength = model.getInt(STRENGTH);
         perception = model.getInt(PERCEPTION);
         stamina = model.getInt(STAMINA);
+        expGain = model.has(EXP_GAIN) ? model.getInt(EXP_GAIN) : 0;
 
         modifiers = Lists.newArrayList();
         if (model.has(MODIFIERS))
@@ -91,6 +95,7 @@ public class Creature extends Actor
         save.put(STRENGTH, strength);
         save.put(PERCEPTION, perception);
         save.put(STAMINA, stamina);
+        save.put(EXP_GAIN, expGain);
         save.putLoadables(MODIFIERS, modifiers);
 
         return save;

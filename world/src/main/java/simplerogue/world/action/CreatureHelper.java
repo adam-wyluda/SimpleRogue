@@ -2,7 +2,6 @@ package simplerogue.world.action;
 
 import simplerogue.engine.game.GameUtil;
 import simplerogue.world.level.creature.Creature;
-import simplerogue.world.level.creature.Player;
 
 /**
  * @author Adam Wyłuda
@@ -27,9 +26,5 @@ public class CreatureHelper
         }
 
         return killed;
-    }
-
-    public static void levelUp(Player player)
-    {
     }
 }
