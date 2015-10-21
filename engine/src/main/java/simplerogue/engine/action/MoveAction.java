@@ -91,7 +91,7 @@ public class MoveAction extends AbstractAction<FieldElement>
             if (actor == player)
             {
                 String message = String.format(
-                        "@(GRAY|)You take @(GREEN|)%s@(GRAY|)",
+                        "@(GRAY|)You took @(GREEN|)%s@(GRAY|)",
                         item.getName());
                 GameUtil.appendMessage(message);
             }

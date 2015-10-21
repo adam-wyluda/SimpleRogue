@@ -101,7 +101,7 @@ public class AttackAction extends AbstractAction<Creature>
             }
 
             String message = String.format(
-                    "@(BLUE|)%s@(GRAY|) has dealt @(YELLOW|)%d@(GRAY|) damage to @(RED|)%s",
+                    "@(BLUE|)%s@(GRAY|) did @(YELLOW|)%d@(GRAY|) damage to @(RED|)%s",
                     attacker.getClass().getSimpleName(),
                     damage,
                     target.getClass().getSimpleName());
@@ -110,7 +110,7 @@ public class AttackAction extends AbstractAction<Creature>
             if (CreatureHelper.dealDamage(target, damage))
             {
                 message = String.format(
-                        "@(BLUE|)%s@(GRAY|) killed @(RED|)%s",
+                        "@(BLUE|)%s@(GRAY|) has killed @(RED|)%s",
                         attacker.getClass().getSimpleName(),
                         target.getClass().getSimpleName());
                 GameUtil.appendMessage(message);
