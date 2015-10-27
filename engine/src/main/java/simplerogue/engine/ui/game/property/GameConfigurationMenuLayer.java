@@ -55,5 +55,7 @@ public class GameConfigurationMenuLayer extends MenuLayer
                 switchTo(GameLayer.NAME);
             }
         }));
+
+        setSelectedOption(getOptions().get(getOptions().size() - 1));
     }
 }
