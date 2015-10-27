@@ -31,8 +31,8 @@ public class MenuLayer extends FramedLayer
     private String title;
     private Char frameChar = Char.create('#');
     private Char contentChar = Char.DEFAULT_CHAR;
-    private List<MenuOption> options = Lists.newArrayList();
 
+    private List<MenuOption> options = Lists.newArrayList();
     private MenuOption selectedOption;
 
     private final Layout layout = SideLayout.createCenteredLayout(createLayout());
@@ -108,11 +108,11 @@ public class MenuLayer extends FramedLayer
     {
         if (key == Key.DIRECTION_N)
         {
-            moveSelectionDown();
+            moveSelectionUp();
         }
         else if (key == Key.DIRECTION_S)
         {
-            moveSelectionUp();
+            moveSelectionDown();
         }
         else
         {
@@ -123,7 +123,7 @@ public class MenuLayer extends FramedLayer
     private void moveSelectionUp()
     {
         int index = getSelectedIndex();
-        index++;
+        index--;
 
         setSelectedIndex(index);
     }
@@ -131,7 +131,7 @@ public class MenuLayer extends FramedLayer
     private void moveSelectionDown()
     {
         int index = getSelectedIndex();
-        index--;
+        index++;
 
         setSelectedIndex(index);
     }
