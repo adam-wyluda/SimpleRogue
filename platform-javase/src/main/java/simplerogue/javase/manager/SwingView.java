@@ -23,7 +23,7 @@ import java.awt.event.KeyEvent;
  */
 public class SwingView implements View
 {
-    private final static Font FONT = new Font("Lucida Console", Font.PLAIN, 12);
+    private final static Font FONT = new Font(Font.MONOSPACED, Font.PLAIN, 12);
     private final static int CHAR_HEIGHT = 10;
     private final static int CHAR_WIDTH = 7;
 
@@ -39,7 +39,7 @@ public class SwingView implements View
         // Move to center
         frame.setLocationRelativeTo(null);
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         JPanel panel = new JPanel()
         {
 
@@ -91,8 +91,7 @@ public class SwingView implements View
     @Override
     public String promptText(String title, String initialValue)
     {
-        String result = JOptionPane.showInputDialog(title, initialValue);
-        return result;
+        return JOptionPane.showInputDialog(title, initialValue);
     }
 
     @Override

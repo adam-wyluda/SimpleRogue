@@ -20,6 +20,8 @@ public class MainClass
 {
     public static void main(String... args)
     {
+        configureSystem();
+
         SwingUtilities.invokeLater(new Runnable()
         {
             @Override
@@ -30,6 +32,11 @@ public class MainClass
                 runGame(worldManager);
             }
         });
+    }
+
+    public static void configureSystem() {
+        System.setProperty("awt.useSystemAAFontSettings","on");
+        System.setProperty("swing.aatext", "true");
     }
 
     public static void runGame(WorldManager worldManager)
