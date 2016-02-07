@@ -43,4 +43,12 @@ public class Point
 
         return result;
     }
+
+    public Point translate(Point point) {
+        return translate(point.y, point.x);
+    }
+
+    public Point translate(int ty, int tx) {
+        return create(y + ty, x + tx);
+    }
 }

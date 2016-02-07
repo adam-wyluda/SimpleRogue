@@ -19,13 +19,26 @@ public class RectangleRoom extends AbstractRoom implements Room
 {
     private static final int MIN_SIZE = 5;
 
-    private int y;
-    private int x;
-    private int height;
-    private int width;
+    private final int y;
+    private final int x;
+    private final int height;
+    private final int width;
 
-    private Prototype fillPrototype;
-    private Prototype borderPrototype;
+    private final Prototype fillPrototype;
+    private final Prototype borderPrototype;
+
+    private RectangleRoom(int y, int x, int height, int width,
+                          Prototype fillPrototype, Prototype borderPrototype,
+                          Level level) {
+        super(level);
+
+        this.y = y;
+        this.x = x;
+        this.height = height;
+        this.width = width;
+        this.fillPrototype = fillPrototype;
+        this.borderPrototype = borderPrototype;
+    }
 
     public static RectangleRoom createRandom(int startY, int endY, int startX, int endX,
                                              Prototype fillPrototype, Prototype borderPrototype,
@@ -40,14 +53,10 @@ public class RectangleRoom extends AbstractRoom implements Room
         int y = startY + RandomUtil.randomInt(wholeHeight - height);
         int x = startX + RandomUtil.randomInt(wholeWidth - width);
 
-        RectangleRoom result = new RectangleRoom();
-        result.setY(y);
-        result.setX(x);
-        result.setHeight(height);
-        result.setWidth(width);
-        result.setFillPrototype(fillPrototype);
-        result.setBorderPrototype(borderPrototype);
-        result.setLevel(level);
+        RectangleRoom result =
+                new RectangleRoom(y, x, height, width,
+                        fillPrototype, borderPrototype,
+                        level);
 
         return result;
     }

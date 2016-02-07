@@ -11,6 +11,8 @@ import simplerogue.engine.manager.Managers;
 import simplerogue.engine.object.ObjectManager;
 import simplerogue.engine.object.Prototype;
 
+import java.util.List;
+
 /**
  * Methods useful in level generation.
  *
@@ -31,8 +33,6 @@ public class GeneratorUtil
                                      int posY, int posX,
                                      int height, int width)
     {
-        ObjectManager objectManager = Managers.get(ObjectManager.class);
-
         for (int y = 0; y < height; y++)
         {
             for (int x = 0; x < width; x++)
@@ -40,51 +40,13 @@ public class GeneratorUtil
                 if (y == 0 || y == height - 1 ||
                         x == 0 || x == width - 1)
                 {
-                    Field borderField = objectManager.createField(borderPrototype.getFieldId());
+                    Field borderField = borderPrototype.create();
                     level.putField(borderField, y + posY, x + posX);
                 }
                 else if (fillPrototype.isPresent())
                 {
-                    Field fillField = objectManager.createField(fillPrototype.get().getFieldId());
+                    Field fillField = fillPrototype.get().create();
                     level.putField(fillField, y + posY, x + posX);
-                }
-            }
-        }
-    }
-
-    /**
-     * Separates all fields from NullFields with given wall field.
-     *
-     * @see simplerogue.engine.level.NullField
-     */
-    public static void drawWalls(Level level,
-                                 Prototype wallPrototype)
-    {
-        FieldArea area = level.getArea();
-        int height = area.getHeight();
-        int width = area.getWidth();
-
-        Field wall = wallPrototype.create();
-
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                Field field = area.getFieldAt(y, x);
-
-                if (field.is(NullField.class))
-                {
-                    for (Direction direction : Direction.values())
-                    {
-                        Field nearField = direction.transform(field);
-
-                        if (!nearField.is(NullField.class) && !nearField.is(wall.getClass()))
-                        {
-                            Field newWall = wallPrototype.create();
-
-                            level.putField(newWall, field.getPosY(), field.getPosX());
-                        }
-                    }
                 }
             }
         }
